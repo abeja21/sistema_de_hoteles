@@ -1,0 +1,2 @@
+1 individual 20
+2 doble 50

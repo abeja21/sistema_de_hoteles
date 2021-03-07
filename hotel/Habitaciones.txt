@@ -1,2 +1,11 @@
-1 individual 20
-2 doble 50
+1 individual 20 true
+2 individual 20 false
+3 individual 20 true
+4 individual 20 true
+5 individual 20 true
+6 doble 50 true
+7 doble 50 true
+8 doble 50 true
+9 premium 100 true
+10 premium 100 true
+11 individual 20 true

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Reserva {
-    private int id_reserva;
+    private SimpleDateFormat formato= new SimpleDateFormat("dd-mm-yyyy");
     private Date fech_entr;
     private Date fech_sal;
     private int Id_habitacion;
@@ -14,21 +14,17 @@ public class Reserva {
     public static ArrayList<Reserva> Reservas= new ArrayList<>();
 
 
-    public Reserva(int id_reserva, Date fech_entr, Date fech_sal, int id_habitacion,String nombre,int codigo) {
-        this.id_reserva = id_reserva;
+
+    public Reserva( Date fech_entr, Date fech_sal, int id_habitacion,String nombre,int codigo) {
+
         this.fech_entr = fech_entr;
         this.fech_sal = fech_sal;
         Id_habitacion = id_habitacion;
         this.codigo=codigo;
+        this.nm_usu=nombre;
     }
 
-    public int getId_reserva() {
-        return id_reserva;
-    }
 
-    public void setId_reserva(int id_reserva) {
-        this.id_reserva = id_reserva;
-    }
 
     public Date getFech_entr() {
         return fech_entr;
@@ -72,6 +68,6 @@ public class Reserva {
 
     @Override
     public String toString() {
-        return id_reserva+" "+fech_entr+" "+fech_sal+" "+Id_habitacion+" "+nm_usu+" "+codigo;}
+        return formato.format(fech_entr)+" "+formato.format(fech_sal)+" "+Id_habitacion+" "+nm_usu+" "+codigo;}
 }
 
